@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Python Packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Model Cache
+.cache/
+huggingface/
+.huggingface/
+
+# Ollama (optional)
+.ollama/
+
+# SQLite
+*.db
+*.sqlite3
+
+# Uploaded Files
+uploads/
+
+# Temporary Files
+temp/
+tmp/
+
+# FastAPI
+*.pid
+
+# MyPy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# PyCharm
+.idea/
+
+# Local secrets
+secrets/
