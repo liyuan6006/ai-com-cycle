@@ -24,6 +24,7 @@
 #     return state
 
 from services.ai_resolution_service import ai_resolution_service
+from MCP.client import jira_mcp_client
 
 
 def resolution_agent(state: dict) -> dict:
@@ -39,5 +40,16 @@ def resolution_agent(state: dict) -> dict:
         "summary": result["summary"],
         "owner": result["owner"],
     }
+
+    if result.get("create_jira", True):
+
+        jira = jira_mcp_client.create_issue(
+            summary=result["jira"]["summary"],
+            description=result["jira"]["description"],
+            priority=result["jira"]["priority"],
+            assignee=result["jira"]["assignee"],
+        )
+
+        state["jira"] = jira
 
     return state
